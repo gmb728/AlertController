@@ -23,11 +23,49 @@ class ViewController: UIViewController {
             let okAction = UIAlertAction(title: "OK", style:.default, handler: nil)
             controller.addAction(okAction)
             self.present(controller, animated: true, completion: nil)
-            
         }
-
+    
+       
+    //21
+        if let blackjackText = blackJackTextField.text,
+            let blackjack = Int(blackjackText)
+        { if blackjack == 21{
+            let controller = UIAlertController(title: "Black Jack!", message: "Welcome to Harvard!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style:.default, handler: nil)
+            controller.addAction(okAction)
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+        if let blackjackText = blackJackTextField.text,
+            let blackjack = Int(blackjackText)
+        { if blackjack > 21{
+            let controller = UIAlertController(title: "Burst!", message: "Professor Micky took all money!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style:.default, handler: nil)
+            controller.addAction(okAction)
+            self.present(controller, animated: true, completion: nil)
+            }
+        }
+        if let blackjackText = blackJackTextField.text,
+            let blackjack = Int(blackjackText)
+        { if blackjack < 21 && blackjack >= 17{
+            let controller = UIAlertController(title: "Tie!", message: "Winner, Winner, Chicken Closer!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style:.default, handler: nil)
+            controller.addAction(okAction)
+            self.present(controller, animated: true, completion: nil)
+            }
+        }
+        if let blackjackText = blackJackTextField.text,
+            let blackjack = Int(blackjackText)
+        { if blackjack < 17 {
+            let controller = UIAlertController(title: "Lose!", message: "Go back to school and be a nerd", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style:.default, handler: nil)
+            controller.addAction(okAction)
+            self.present(controller, animated: true, completion: nil)
+            }
         }
         
+    }
+    
     
         
     override func viewDidLoad() {
